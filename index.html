@@ -38,7 +38,7 @@
             <div id="content">
 
                 <div id="bio">
-                    <h2 style="margin-top:26px; color:#000">Biography</h2>
+                    <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Biography</h2>
                     <br>
                     <p>
                         I am currently a PhD candidate in the <a href="https://engineering.buffalo.edu/computer-science-engineering.html">Department of Computer Science and Engineering</a> at <a href="https://www.buffalo.edu/">University at Buffalo, State University of New York</a>, supervised by Prof. <a href="https://cse.buffalo.edu/~qiao/index.htm">Chunming Qiao</a> and Prof. <a href="https://engineering.purdue.edu/~lusu/">Lu Su</a>. 
@@ -49,21 +49,21 @@
                 </div>
 
                 <div id="research">
-                    <h2 style="margin-top:26px; color:#000;">Research</h2>
+                    <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Research</h2>
                     <br>
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                     
                     <tr>
-                        <td style="vertical-align:top">
-                            <img src="./Yi_Zhu_homepage_files/test.jpg" width="170px" height="auto" style="float:left; margin-right:3%; ">
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/sensys22_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
                         </td>
-                        <td style="vertical-align:top">
-                            <strong>[CCS'21]</strong>
-                            "Can we use arbitrary objects to attack LiDAR perception in autonomous driving?",
-                            <em>the 2021 ACM SIGSAC Conference on Computer and Communications Security</em>, Virtual Conference, November 2021. <br>
+                        <td style="padding:20px;vertical-align:top">
+                            <strong>[SenSys'22]</strong>
+                            "Towards Backdoor Attacks against LiDAR Object Detection in Autonomous Driving",
+                            <em>the 2022 ACM Conference on Embedded NetworkedSensor Systems</em>, Boston, United States, November 2022. <br>
                             <script>
-                            function toggleMultiAbs() {
-                                var text = document.getElementById("multi_abs");
+                            function toggleSenSys22() {
+                                var text = document.getElementById("SenSys22");
                                 if (text.style.display === "none") {
                                     text.style.display = "block";
                                 } else {
@@ -71,26 +71,79 @@
                                 }
                             }
                             </script>
-                            <a href="." onclick="toggleMultiAbs(); return false;">[Abstract]</a>
+                            <a href="." onclick="toggleSenSys22(); return false;">[Abstract]</a>
+                            <a href="Yi_Zhu_homepage_files/papers/SenSys22.pdf"> [PDF]</a>
+                            <p id="SenSys22" style="display: none">
+                                Due to the great advantage of LiDAR sensors in perceiving complex driving environments, LiDAR-based 3D object detection has recently drawn significant attention in autonomous driving. Although many advanced LiDAR object detection models have been developed, their designs are mainly based on deep learning approaches, which are usually data-hungry and expensive to train. Thus, it is common for some LiDAR perception system developers or self-driving car companies to collect training data from different sources (e.g., self-driving car users) or outsource the training work to a third party. However, these practices provide opportunities for backdoor attacks, where the attacker aims to inject a hidden trigger pattern into the victim detection model by poisoning its training set and let the model fail to detect objects when the trigger presents in the inference phase. Although backdoor attacks have posed serious security concerns, the vulnerability of LiDAR object detection to such attacks has not yet been studied. To fill the research gap, in this paper, we present the first study on backdoor attacks against LiDAR object detection in autonomous driving. Specifically, we propose a novel backdoor attack strategy based on which the attacker can achieve the attack goal by poisoning a small number of point cloud samples. In addition, the proposed attack strategy is physically realizable, and it allows the attacker to easily perform the attack using some common objects as the triggers. To make the poisoned samples difficult to be detected, we also design a stealthy attack strategy by creating some fake vehicle point clusters to hide the injected points in the point cloud. The desirable performance of our attacks is demonstrated through both simulation and real-world case study.
+                            </p> 
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/sensys21_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
+                        </td>
+                        <td style="padding:20px;vertical-align:top">
+                            <strong>[SenSys'21]</strong>
+                            "Adversarial Attacks against LiDAR Semantic Segmentation in Autonomous Driving",
+                            <em>the 2021 ACM Conference on Embedded NetworkedSensor Systems</em>, Coimbra, Portugal, November 2021. <br>
+                            <script>
+                            function toggleSenSys21() {
+                                var text = document.getElementById("SenSys21");
+                                if (text.style.display === "none") {
+                                    text.style.display = "block";
+                                } else {
+                                    text.style.display = "none";
+                                }
+                            }
+                            </script>
+                            <a href="." onclick="toggleSenSys21(); return false;">[Abstract]</a>
+                            <a href="Yi_Zhu_homepage_files/papers/SenSys21_69.pdf"> [PDF]</a>
+                            <a href="https://youtu.be/oL84fMPOyzk"> [Demo]</a>
+                            <p id="SenSys21" style="display: none">
+                                Today, most autonomous vehicles (AVs) rely on LiDAR (Light Detection and Ranging) perception to acquire accurate information about their immediate surroundings. In LiDAR-based perception systems, semantic segmentation plays a critical role as it can divide LiDAR point clouds into meaningful regions according to human perception and provide AVs with semantic understanding of the driving environments. However, an implicit assumption for existing semantic segmentation models is that they are performed in a reliable and secure environment, which may not be true in practice. In this paper, we investigate adversarial attacks against LiDAR semantic segmentation in autonomous driving. Specifically, we propose a novel adversarial attack framework based on which the attacker can easily fool LiDAR semantic segmentation by placing some simple objects (e.g., cardboard and road signs) at some locations in the physical space. We conduct extensive real-world experiments to evaluate the performance of our proposed attack framework. The experimental results show that our attack can achieve more than 90% success rate in real-world driving environments. To the best of our knowledge, this is the first study on physically realizable adversarial attacks against LiDAR point cloud semantic segmentation with real-world evaluations.
+                            </p> 
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/ccs21_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
+                        </td>
+                        <td style="padding:20px;vertical-align:top">
+                            <strong>[CCS'21]</strong>
+                            "Can we use arbitrary objects to attack LiDAR perception in autonomous driving?",
+                            <em>the 2021 ACM SIGSAC Conference on Computer and Communications Security</em>, Virtual Conference, November 2021. <br>
+                            <script>
+                            function toggleCCS21() {
+                                var text = document.getElementById("CCS21");
+                                if (text.style.display === "none") {
+                                    text.style.display = "block";
+                                } else {
+                                    text.style.display = "none";
+                                }
+                            }
+                            </script>
+                            <a href="." onclick="toggleCCS21(); return false;">[Abstract]</a>
                             <a href="Yi_Zhu_homepage_files/papers/CCS21_434.pdf"> [PDF]</a>
                             <a href="https://youtu.be/S-QOpFCfgwU"> [Demo]</a>
-                            <p id="multi_abs" style="display: none">
+                            <p id="CCS21" style="display: none">
                                 As an effective way to acquire accurate information about the driving environment, LiDAR perception has been widely adopted in autonomous driving. The state-of-the-art LiDAR perception systems mainly rely on deep neural networks (DNNs) to achieve good performance. However, DNNs have been demonstrated vulnerable to adversarial attacks. Although there are a few works that study adversarial attacks against LiDAR perception systems, these attacks have some limitations in feasibility, flexibility, and stealthiness when being performed in real-world scenarios. In this paper, we investigate an easier way to perform effective adversarial attacks with high flexibility and good stealthiness against LiDAR perception in autonomous driving. Specifically, we propose a novel attack framework based on which the attacker can identify a few adversarial locations in the physical space. By placing arbitrary objects with reflective surface around these locations, the attacker can easily fool the LiDAR perception systems. Extensive experiments are conducted to evaluate the performance of the proposed attack, and the results show that our proposed attack can achieve more than 90% success rate. In addition, our real-world study demonstrates that the proposed attack can be easily performed using only two commercial drones. To the best of our knowledge, this paper presents the first study on the effect of adversarial locations on LiDAR perception models’ behaviors, the first investigation on how to attack LiDAR perception systems using arbitrary objects with reflective surface, and the first attack against LiDAR perception systems using commercial drones in physical world. Potential defense strategies are also discussed to mitigate the proposed attacks.
                             </p> 
                         </td>
                     </tr> 
 
                     <tr>
-                        <td style="vertical-align:top">
-                            <img src="./Yi_Zhu_homepage_files/test.jpg" width="170px" height="auto" style="float:left; margin-right:3%; ">
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/tosn_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
                         </td>
-                        <td style="vertical-align:top">
-                            <strong>[CCS'21]</strong>
-                            "Can we use arbitrary objects to attack LiDAR perception in autonomous driving?",
-                            <em>the 2021 ACM SIGSAC Conference on Computer and Communications Security</em>, Virtual Conference, November 2021. <br>
+                        <td style="padding:20px;vertical-align:top">
+                            <strong>[TOSN]</strong>
+                            "Driver Behavior-aware Parking Availability Crowdsensing System Using Truth Discovery",
+                            <em>ACM Transactions on Sensor Networks</em>. <br>
                             <script>
-                            function toggleMultiAbs() {
-                                var text = document.getElementById("multi_abs");
+                            function toggleTOSN() {
+                                var text = document.getElementById("TOSN");
                                 if (text.style.display === "none") {
                                     text.style.display = "block";
                                 } else {
@@ -98,11 +151,10 @@
                                 }
                             }
                             </script>
-                            <a href="." onclick="toggleMultiAbs(); return false;">[Abstract]</a>
-                            <a href="Yi_Zhu_homepage_files/papers/CCS21_434.pdf"> [PDF]</a>
-                            <a href="https://youtu.be/S-QOpFCfgwU"> [Demo]</a>
-                            <p id="multi_abs" style="display: none">
-                                As an effective way to acquire accurate information about the driving environment, LiDAR perception has been widely adopted in autonomous driving. The state-of-the-art LiDAR perception systems mainly rely on deep neural networks (DNNs) to achieve good performance. However, DNNs have been demonstrated vulnerable to adversarial attacks. Although there are a few works that study adversarial attacks against LiDAR perception systems, these attacks have some limitations in feasibility, flexibility, and stealthiness when being performed in real-world scenarios. In this paper, we investigate an easier way to perform effective adversarial attacks with high flexibility and good stealthiness against LiDAR perception in autonomous driving. Specifically, we propose a novel attack framework based on which the attacker can identify a few adversarial locations in the physical space. By placing arbitrary objects with reflective surface around these locations, the attacker can easily fool the LiDAR perception systems. Extensive experiments are conducted to evaluate the performance of the proposed attack, and the results show that our proposed attack can achieve more than 90% success rate. In addition, our real-world study demonstrates that the proposed attack can be easily performed using only two commercial drones. To the best of our knowledge, this paper presents the first study on the effect of adversarial locations on LiDAR perception models’ behaviors, the first investigation on how to attack LiDAR perception systems using arbitrary objects with reflective surface, and the first attack against LiDAR perception systems using commercial drones in physical world. Potential defense strategies are also discussed to mitigate the proposed attacks.
+                            <a href="." onclick="toggleTOSN(); return false;">[Abstract]</a>
+                            <a href="Yi_Zhu_homepage_files/papers/TOSN.pdf"> [PDF]</a>
+                            <p id="TOSN" style="display: none">
+                                Spot-level parking availability information (the availability of each spot in a parking lot) is in great demand, as it can help reduce time and energy waste while searching for a parking spot. In this article, we propose a crowdsensing system called SpotE that can provide spot-level availability in a parking lot using drivers’ smartphone sensors. SpotE only requires the sensor data from drivers’ smartphones, which avoids the high cost of installing additional sensors and enables large-scale outdoor deployment. We propose a new model that can use the parking search trajectory and final destination (e.g., an exit of the parking lot) of a single driver in a parking lot to generate the probability profile that contains the probability of each spot being occupied in a parking lot. To deal with conflicting estimation results generated from different drivers, due to the variance in different drivers’ parking behaviors, a novel aggregation approach SpotE-TD is proposed. The proposed aggregation method is based on truth discovery techniques and can handle the variety in Quality of Information of different vehicles. We evaluate our proposed method through a real-life deployment study. Results show that SpotE-TD can efficiently provide spot-level parking availability information with a 20% higher accuracy than the state-of-the-art.
                             </p> 
                         </td>
                     </tr> 
@@ -111,7 +163,7 @@
                 </div>
 
                 <div id="pro_act">
-                    <h2 style="margin-top:26px; color:#000">Professional Service</h2>
+                    <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Professional Service</h2>
                     <h4 style="margin-top:0px;">Journal Reviewer</h4>
                     <li>ACM Transactions on Sensor Networks (TOSN)</li>
 
@@ -128,7 +180,7 @@
                 </div>
 
                 <div id="teaching">
-                    <h2 style="margin-top:26px; color:#000">Teaching Experiences</h2>
+                    <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Teaching Experiences</h2>
                     <h4 style="margin-top:0px;">Teaching Assistant</h4>
                     <ul>
                         <li>Spring 2021, Modern Network Concepts</li>
@@ -141,7 +193,7 @@
                 </div>
 
                 <div id="honor">
-                    <h2 style="margin-top:26px; color:#000">Honors and Rewards</h2>
+                    <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Honors and Rewards</h2>
                     <br>
                     <ul>
                         <li>2018-2022, Presidential Fellowships, University at Buffalo, the State University of New York</li>
