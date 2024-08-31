@@ -30,7 +30,6 @@
                 <br>
 
                 <p style="color:#000;">
-                    <b>Office:</b> 301C Davis Hall <br>
                     <b>Email:</b> yzhu39 at buffalo dot edu <br>
                 </p>
             </div>
@@ -41,9 +40,9 @@
                     <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Biography</h2>
                     <br>
                     <p>
-                        I am currently a PhD candidate in the <a href="https://engineering.buffalo.edu/computer-science-engineering.html">Department of Computer Science and Engineering</a> at <a href="https://www.buffalo.edu/">University at Buffalo, The State University of New York</a>, supervised by Prof. <a href="https://cse.buffalo.edu/~qiao/index.htm">Chunming Qiao</a> and Prof. <a href="https://engineering.purdue.edu/~lusu/">Lu Su</a>. 
+                        I am a PhD candidate in the <a href="https://engineering.buffalo.edu/computer-science-engineering.html">Department of Computer Science and Engineering</a> at <a href="https://www.buffalo.edu/">University at Buffalo, The State University of New York</a>, supervised by Prof. <a href="https://cse.buffalo.edu/~qiao/index.htm">Chunming Qiao</a> and Prof. <a href="https://engineering.purdue.edu/~lusu/">Lu Su</a>. 
                         <br>
-                        My research interests lie in the areas of security, autonomous driving, and machine learning. I am especially interested in studying the vulnerability of autonomous driving systems to malicious attacks and developing novel AI techniques to make them robust and reliable.
+                        My research interests lie in the broad areas of Security &#38 Privacy, Cyber-Physical Systems (CPS), IoT, and AI. I am especially interested in AI Security and CPS Security &#38 Safety.
                     </p>
 
                 </div>
@@ -53,6 +52,90 @@
                     <br>
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                     
+                    <tr>
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/Usenix24_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
+                        </td>
+                        <td style="padding:20px;vertical-align:top">
+                            <h3 style="color:#000; margin-bottom:8px"><strong>[USENIX Security'24]</strong>
+                            A First Physical-World Trajectory Prediction Attack via LiDAR-induced Deceptions in Autonomous Driving </h3>
+                            Yang Lou*, <strong>Yi Zhu* (equal contribution)</strong>, Qun Song*, Rui Tan, Chunming Qiao, Wei-Bin Lee, and Jianping Wang. <br>
+                            <em>The 33rd USENIX Security Symposium.</em> <br>
+                            <script>
+                            function toggleUsenix24() {
+                                var text = document.getElementById("Usenix24");
+                                if (text.style.display === "none") {
+                                    text.style.display = "block";
+                                } else {
+                                    text.style.display = "none";
+                                }
+                            }
+                            </script>
+                            <a href="." onclick="toggleUsenix24(); return false;">[Abstract]</a>
+                            <a href="Yi_Zhu_homepage_files/papers/Usenix24.pdf"> [PDF]</a>
+                            <a href="https://1drv.ms/v/s!Aoc_mWfaEyaGbrdCPNS9oKMjm9Q?e=f1GA6u"> [Video]</a>
+                            <p id="Usenix24" style="display: none">
+                                Trajectory prediction forecasts nearby agents’ moves based on their historical trajectories. Accurate trajectory prediction (or prediction in short) is crucial for autonomous vehicles (AVs). Existing attacks compromise the prediction model of a victim AV by directly manipulating the historical trajectory of an attacker AV, which has limited real-world applicability. This paper, for the first time, explores an indirect attack approach that induces prediction errors via attacks against the perception module of a victim AV. Although it has been shown that physically realizable attacks against LiDAR-based perception are possible by placing a few objects at strategic locations, it is still an open challenge to find an object location from the vast search space in order to launch effective attacks against prediction under varying victim AV velocities. 
+
+                                Through analysis, we observe that a prediction model is prone to an attack focusing on a single point in the scene. Consequently, we propose a novel two-stage attack framework to realize the single-point attack. The first stage of predictionside attack efficiently identifies, guided by the distribution of detection results under object-based attacks against perception, the state perturbations for the prediction model that are effective and velocity-insensitive. In the second stage of location matching, we match the feasible object locations with the found state perturbations. Our evaluation using a public autonomous driving dataset shows that our attack causes a collision rate of up to 63% and various hazardous responses of the victim AV. The effectiveness of our attack is also demonstrated on a real testbed car 1. To the best of our knowledge, this study is the first security analysis spanning from LiDARbased perception to prediction in autonomous driving, leading to a realistic attack on prediction. To counteract the proposed attack, potential defenses are discussed.
+                            </p> 
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/Mobicom24_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
+                        </td>
+                        <td style="padding:20px;vertical-align:top">
+                            <h3 style="color:#000; margin-bottom:8px"><strong>[MobiCom'24]</strong>
+                            Malicious Attacks against Multi-Sensor Fusion in Autonomous Driving </h3>
+                            <strong>Yi Zhu</strong>, Chenglin Miao, Hongfei Xue, Yunnan Yu, Lu Su, and Chunming Qiao. <br>
+                            <em>The 30th Annual International Conference on Mobile Computing and Networking.</em> <br>
+                            <script>
+                            function toggleMobicom24() {
+                                var text = document.getElementById("Mobicom24");
+                                if (text.style.display === "none") {
+                                    text.style.display = "block";
+                                } else {
+                                    text.style.display = "none";
+                                }
+                            }
+                            </script>
+                            <a href="." onclick="toggleMobicom24(); return false;">[Abstract]</a>
+                            <!--  <a href="Yi_Zhu_homepage_files/papers/Mobicom24.pdf"> [PDF]</a> -->
+                            <p id="Mobicom24" style="display: none">
+                                Multi-sensor fusion has been widely used by autonomous vehicles (AVs) to integrate the perception results from different sensing modalities including LiDAR, camera and radar. Despite the rapid development of multi-sensor fusion systems in autonomous driving, their vulnerability to malicious attacks have not been well studied. Although some prior works have studied the attacks against the perception systems of AVs, they only consider a single sensing modality or a camera-LiDAR fusion system, which can not attack the sensor fusion system based on LiDAR, camera, and radar. To fill this research gap, in this paper, we present the first study on the vulnerability of multi-sensor fusion systems that employ LiDAR, camera, and radar. Specifically, we propose a novel attack method that can simultaneously attack all three types of sensing modalities using a single type of adversarial object. The adversarial object can be easily fabricated at low cost, and the proposed attack can be easily performed with high stealthiness and flexibility in practice. Extensive experiments based on a real-world AV testbed show that the proposed attack can continuously hide a target vehicle from the perception system of a victim AV using only two small adversarial objects.
+                            </p> 
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td style="padding:20px;vertical-align:top">
+                            <img src="./Yi_Zhu_homepage_files/CCS23_example.png" width="220px" height="auto" style="float:left; margin-right:3%; ">
+                        </td>
+                        <td style="padding:20px;vertical-align:top">
+                            <h3 style="color:#000; margin-bottom:8px"><strong>[CCS'23]</strong>
+                            TileMask: A Passive-Reflection-based Attack against mmWave Radar Object Detection in Autonomous Driving </h3>
+                            <strong>Yi Zhu</strong>, Chenglin Miao, Hongfei Xue, Zhengxiong Li, Yunnan Yu, Wenyao Xu, Lu Su, and Chunming Qiao. <br>
+                            <em>2023 ACM SIGSAC Conference on Computer and Communications Security.</em> (Accept Rate: 19.87%) <br>
+                            <script>
+                            function toggleCCS23() {
+                                var text = document.getElementById("CCS23");
+                                if (text.style.display === "none") {
+                                    text.style.display = "block";
+                                } else {
+                                    text.style.display = "none";
+                                }
+                            }
+                            </script>
+                            <a href="." onclick="toggleCCS23(); return false;">[Abstract]</a>
+                            <a href="Yi_Zhu_homepage_files/papers/CCS23.pdf"> [PDF]</a>
+                            <a href="https://youtu.be/WkJ6Bvj1Msw"> [Video]</a>
+                            <p id="CCS23" style="display: none">
+                                In autonomous driving, millimeter wave (mmWave) radar has been widely adopted for object detection because of its robustness and reliability under various weather and lighting conditions. For radar object detection, deep neural networks (DNNs) are becoming increasingly important because they are more robust and accurate, and can provide rich semantic information about the detected objects, which is critical for autonomous vehicles (AVs) to make decisions. However, recent studies have shown that DNNs are vulnerable to adversarial attacks. Despite the rapid development of DNN-based radar object detection models, there have been no studies on their vulnerability to adversarial attacks. Although some spoofing attack methods are proposed to attack the radar sensor by actively transmitting specific signals using some special devices, these attacks require sub-nanosecond-level synchronization between the devices and the radar and are very costly, which limits their practicability in real world. In addition, these attack methods can not effectively attack DNN-based radar object detection. To address the above problems, in this paper, we investigate the possibility of using a few adversarial objects to attack the DNN-based radar object detection models through passive reflection. These objects can be easily fabricated using 3D printing and metal foils at low cost. By placing these adversarial objects at some specific locations on a target vehicle, we can easily fool the victim AV's radar object detection model. The experimental results demonstrate that the attacker can achieve the attack goal by using only two adversarial objects and conceal them as car signs, which have good stealthiness and flexibility. To the best of our knowledge, this is the first study on the passive-reflection-based attacks against the DNN-based radar object detection models using low-cost, readily-available and easily concealable geometric shaped objects.
+                            </p> 
+                        </td>
+                    </tr> 
 
                     <tr>
                         <td style="padding:20px;vertical-align:top">
@@ -224,6 +307,8 @@
                     <h2 style="margin-top:26px; color:#000; border-bottom:1px solid #C1C0C1;">Professional Service</h2>
                     <h4 style="margin-top:0px;">Journal Reviewer</h4>
                     <li>ACM Transactions on Sensor Networks (TOSN)</li>
+                    <li>IEEE Transactions on Mobile Computing</li>
+                    <li>IEEE Internet of Things</li>
 
                     <h4 style="margin-top:0px;">Conference External Reviewer</h4>
                     <li>The 28th ACM International Conference on Mobile Computing and Networking (MobiCom 2022)</li>
